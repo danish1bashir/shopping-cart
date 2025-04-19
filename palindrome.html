@@ -1,0 +1,37 @@
+<script>
+	x=prompt("enter an array");
+	let arr=x.split(",");
+  
+	flag=1;
+
+	l=arr.length;
+	l=l-1;
+
+	i=0;
+	m=Math.floor(l/2);
+
+	for(i=0; i<=m; i++, l--){
+	
+		if (arr[i] != arr[l])
+    {
+           flag=0;
+           break;
+
+	}
+
+   }
+
+
+    if (flag==1)
+
+    {
+       alert("palindrome");
+    }
+
+    else
+
+    {
+       alert("not palindrome");
+    }
+
+</script>

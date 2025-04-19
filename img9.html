@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>	</title>
+	<img src="images\25.jpg" id="bigimg">
+
+	<br><br>
+
+	  <img src="images\25.jpg" class="smallimages" onclick="fun(0)">
+	  <img src="images\26.jpg" class="smallimages" onclick="fun(1)">
+	  <img src="images\27.jpg" class="smallimages" onclick="fun(2)">
+
+</head>
+<body>
+
+</body>
+</html>
+
+<style>
+
+	#bigimg
+	{
+		margin:30px;
+		height:300px;
+		width:300px;
+		padding: 20px;
+		background-color: whitesmoke;
+	}
+
+	.smallimages
+	{
+	    
+	    margin:30px;
+		height:60px;
+		width:60px;
+	}	
+	
+</style>
+     
+
+<script>
+	
+	function fun(i){
+
+	arr=document.getElementsByClassName('smallimages');
+	document.getElementById('bigimg').src=arr[i].src;
+    
+    }
+    
+</script>

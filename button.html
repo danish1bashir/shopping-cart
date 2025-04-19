@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title></title>
+</head>
+<body>
+	<div id="result"></div>
+
+	<button onclick="fun1()">sum</button>
+	<button onclick="fun2()">Even series</button>
+	<button onclick="fun3()">check prime</button>
+	<button onclick="fun5()">check armStrong</button>
+	<button onclick="fun6()">check +ve no.s</button>
+	<button onclick="fun7()">check -ve no.s</button>
+
+</body>
+</html>
+<script>
+	function fun1()
+	{
+     x=10;
+     y=20;
+     z=x+y;
+    
+     document.getElementById("result").innerText=z;
+	}
+	
+
+
+	function fun2()
+	{
+		x=0;
+		document.getElementById("result").innerText="";
+		while(x<10)
+		{
+		document.getElementById("result").innerText+=x;
+          x=x+2;
+		}
+	}
+
+
+
+   function fun3(){
+
+	 x=prompt("enter x");
+   
+	 let y=2;
+
+	 let isPrime = true;
+
+	 while ( y < x)
+
+	{
+     if (x % y == 0)
+
+     {
+     	isPrime = false;
+
+     	break;
+     }
+
+        y=y+1;
+	}
+
+	if(isPrime && x>1)
+	{
+		 document.getElementById("result").innerText="no. is prime";
+	}
+	else
+	{ 
+         document.getElementById("result").innerText="no. is not prime";
+	}
+}
+
+
+
+   function fun5(){
+
+	 x=prompt("enter the number");
+	
+	let a=x;
+	let y;
+	let z=0;
+
+	while(x>0)
+	{
+		 y=x%10;
+         y=y*y*y;
+         z=z+y;
+         x=Math.floor(x/10);
+		
+	}
+
+    if(z==a)
+   
+   {
+      document.getElementById("result").innerText="no. is armStrong";
+   }
+   else
+   {
+       document.getElementById("result").innerText="no. is not armStrong";
+   }
+}
+
+
+
+
+
+       function fun6(){
+	
+     x=prompt("enter the elements of an array");
+	
+	let arr = x.split(",");
+
+    let count = 0;
+
+    	for(let i=0; i<arr.length; i++){
+    		if(arr[i]>0){
+    			count++;
+
+       			}
+       		}
+
+	
+    document.getElementById("result").innerText="No. of positive elements are: " + count;
+}
+
+     function fun7(){
+	
+     x=prompt("enter the elements of an array");
+	
+	  let arr = x.split(",");
+
+      let count = 0;
+
+    	for(let i=0; i<arr.length; i++){
+
+    		if(arr[i]<0){
+
+    			count++;
+
+       			}
+       		}
+
+	
+    document.getElementById("result").innerText="No. of negative elements are: " + count;
+
+}
+
+
+
+
+
+
+
+	
+
+
+</script>
+<style>
+	#result
+	{
+		background-color: black;
+		padding:20px;
+		color:white;
+		margin:10px;
+	}
+
+
+
+</style>

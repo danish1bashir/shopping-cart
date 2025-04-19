@@ -1,0 +1,35 @@
+<script>
+	function fun5(){
+	 x=prompt("enter the number");
+	
+	let a=x;
+	let y;
+	let z=0;
+
+	while(x>0)
+	{
+		 y=x%10;
+         y=y*y*y;
+         z=z+y;
+         x=Math.floor(x/10);
+		
+	}
+
+    if(z==a)
+   
+   {
+        document.write("number is armstrong");
+   }
+   else
+   {
+   	    document.write("number is not armstrong");
+   }
+}
+fun5();
+
+
+
+
+
+
+</script>
